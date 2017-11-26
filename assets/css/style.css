@@ -21,13 +21,28 @@ body{
     position: absolute;
     bottom: 50px;
     left: 45%;
+    background-color:lightgray; 
 }
 
 #gameDiv { 
-    width: 900px;
-    height: 390px;
+    width: 1200px;
+    height: 460px;
     opacity: 0.5;
     background-color: white;
     position: relative;
+    margin: 10px 20px 10px 80px;
+    visibility: hidden;
+ }
 
+ h1{
+     text-align: center;
+     font-family: 'Times New Roman', Times, serif;
+     font-size: 50px;
+     font-weight: bold;
+ }
+
+ #timer {
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
  }
