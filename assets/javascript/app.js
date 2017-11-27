@@ -56,10 +56,10 @@ $(document).ready(function() {
         document.getElementById("questionView").innerHTML = "question" + (position+1)+" of "+ qAOptions.length;
 
         question = qAOptions[position][0];
-        ansA = qAOptions[position][A];
-        ansB = qAOptions[position][B];
-        ansC = qAOptions[position][C];
-        ansD = qAOptions[position][D];
+        ansA = qAOptions[position][1];
+        ansB = qAOptions[position][2];
+        ansC = qAOptions[position][3];
+        ansD = qAOptions[position][4];
 
         var html =
         "<p>" + question + "</p>"
