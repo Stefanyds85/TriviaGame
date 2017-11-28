@@ -24,6 +24,7 @@ $(document).ready(function() {
     var ansC; 
     var ansD;
     var ansSelection;
+    var selection;
     var position = 0;
 
     var qAOptions = [
@@ -71,13 +72,19 @@ $(document).ready(function() {
         document.getElementById("questionView").innerHTML = html;
 
         
-    $("#qustionView").on("click","button", function(){
-
+    $("#questionView").on("click","button", function(){
+       
             ansSelection = getElementByName("ansSelection");
             for (var i = 0; i < ansSelection.length; i++);
                 If (ansSelection[i].checked) 
-                    ansSelection = choices [i].value;
-    
+                    selection = ansSelection [i].value;
+                
+            If(selection == questions[position][6]) {
+                correct++;
+            }
+
+            posistion ++;
+            renderQuestion();
             }); 
         }
 
