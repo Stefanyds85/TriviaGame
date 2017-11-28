@@ -23,7 +23,7 @@ $(document).ready(function() {
     var ansB;
     var ansC; 
     var ansD;
-    var ansSelection;
+    var ansChoice;
     var selection;
     var position = 0;
 
@@ -64,27 +64,28 @@ $(document).ready(function() {
 
         var html =
         "<p>" + question + "</p>" +
-        "<br>" + "<button name = ansSelection value = A>" + ansA + "</button>" + "<br>" +
-        "<br>" + "<button name = ansSelection value = B>" + ansB + "</button>" + "<br>" +
-        "<br>" + "<button name = ansSelection value = C>" + ansC + "</button>" + "<br>" +
-        "<br>" + "<button name = ansSelection value = D>" + ansD + "</button>";
+        "<br>" + "<button class = 'ansSelection' value = 'A'>" + ansA + "</button>" + "<br>" +
+        "<br>" + "<button class = 'ansSelection' value = 'B'>" + ansB + "</button>" + "<br>" +
+        "<br>" + "<button class = 'ansSelection' value = 'C'>" + ansC + "</button>" + "<br>" +
+        "<br>" + "<button class = 'ansSelection' value = 'D'>" + ansD + "</button>";
 
         document.getElementById("questionView").innerHTML = html;
 
         
     $("#questionView").on("click","button", function(){
        
-            ansSelection = getElementByName("ansSelection");
-            for (var i = 0; i < ansSelection.length; i++);
-                If (ansSelection[i].checked) 
-                    selection = ansSelection [i].value;
+            ansChoice = $(".ansSelection");
+            // for (var i = 0; i < ansSelection.length; i++);
+                if (ansChoice.value = position [6],
+                console.log("hello"),
                 
-            If(selection == questions[position][6]) {
-                correct++;
-            }
+        //    if(selection == questions[position][6]) {
+            //     correct++;
+            // } 
 
-            posistion ++;
-            renderQuestion();
+            // posistion ++;
+            // renderQuestion();
+
             }); 
         }
 
