@@ -68,20 +68,19 @@ $(document).ready(function() {
         "<br>" + "<button name = ansSelection value = C>" + ansC + "</button>" + "<br>" +
         "<br>" + "<button name = ansSelection value = D>" + ansD + "</button>";
 
-    // $("<button>").on("click") = checkAswers
-
         document.getElementById("questionView").innerHTML = html;
-    };
-        
 
-        function checkAswers(){
+        
+    $("#qustionView").on("click","button", function(){
+
             ansSelection = getElementByName("ansSelection");
             for (var i = 0; i < ansSelection.length; i++);
                 If (ansSelection[i].checked) 
                     ansSelection = choices [i].value;
-                
-            };  
-        
+    
+            }); 
+        }
+
          window.addEventListener ("load", renderQuestion);
          
 
