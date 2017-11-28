@@ -46,3 +46,8 @@ body{
     font-weight: bold;
     font-size: 15px;
  }
+
+ #questionView {
+
+    text-align: center;
+ }

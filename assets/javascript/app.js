@@ -21,7 +21,7 @@ $(document).ready(function() {
     var question;
     var ansA;
     var ansB;
-    var ansC;
+    var ansC; 
     var ansD;
     var ansSelection;
     var position = 0;
@@ -62,22 +62,26 @@ $(document).ready(function() {
         ansD = qAOptions[position][4];
 
         var html =
-        "<p>" + question + "</p>"
-        "<p value = A>" + ansA + "</p>" +
-        "<p value = B>" + ansB + "</p>" +
-        "<p value = C>" + ansC + "</p>" +
-        "<p value = D>" + ansD + "</p>";
+        "<p>" + question + "</p>" +
+        "<br>" + "<button name = ansSelection value = A>" + ansA + "</button>" + "<br>" +
+        "<br>" + "<button name = ansSelection value = B>" + ansB + "</button>" + "<br>" +
+        "<br>" + "<button name = ansSelection value = C>" + ansC + "</button>" + "<br>" +
+        "<br>" + "<button name = ansSelection value = D>" + ansD + "</button>";
+
+    // $("<button>").on("click") = checkAswers
 
         document.getElementById("questionView").innerHTML = html;
-
-    };    
+    };
         
-         function checkAswers(){
-             for (var i = 0; i < qAOptions.length; i++);
-         
-             
 
-         };
+        function checkAswers(){
+            ansSelection = getElementByName("ansSelection");
+            for (var i = 0; i < ansSelection.length; i++);
+                If (ansSelection[i].checked) 
+                    ansSelection = choices [i].value;
+                
+            };  
+        
          window.addEventListener ("load", renderQuestion);
          
 
